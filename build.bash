@@ -18,4 +18,8 @@ rm -rf zoxide zoxide.tar.gz
 
 cp install.bash apsd
 
-tar -czvf apsd.tar.gz apsd/bin apsd/install.bash
+APSD_VERSION=$(git describe --tags)
+
+tar -czvf apsd_${APSD_VERSION}.tar.gz apsd/bin apsd/install.bash
+
+rm -rf apsd
